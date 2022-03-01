@@ -30,12 +30,12 @@ bool balanced(char *expression[], int numTokens) {
     if (numTokens == 0){
         return true;
     }
-
+    
     for (int i = 0;  i < numTokens; i++){
-        if (expression[i]=="("){
+        if (*expression[i] == '('){
             s.push((expression[i]));
         }
-        if (expression[i]==")"){
+        if (*expression[i] == ')'){
             if (s.empty()){
                 return false;
             }
